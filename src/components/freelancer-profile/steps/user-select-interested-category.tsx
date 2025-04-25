@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from '@/components/freelancer-profile/steps/header';
+import Header from './header';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from 'lucide-react';
