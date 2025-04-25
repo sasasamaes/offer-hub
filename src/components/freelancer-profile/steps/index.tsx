@@ -6,7 +6,7 @@ import UserSelectInterestedCategory from './user-select-interested-category'
 const steps = [
   { key: 'user-choose-role', component: null }, // to be implemented
   { key: 'user-select-job-type', component: null }, // to be implemented
-  { key: 'user-select-interested-category', component: <UserSelectInterestedCategory /> },
+  { key: 'user-select-interested-category', component: UserSelectInterestedCategory },
   { key: 'user-add-work-experience', component: null },  // to be implemented
   { key: 'user-add-work-experience-active-state', component: null },  // to be implemented
   { key: 'user-add-work-experience-active-state-not-in-focus', component: null },  // to be implemented
@@ -26,7 +26,7 @@ export default function StepsController() {
 
   return (
     <>
-      {StepComponent ? StepComponent : <p>This step is not yet implemented.</p>}
+      {StepComponent ? <StepComponent prevStep={prevStep} nextStep={nextStep} /> : <p>This step is not yet implemented.</p>}
 
       <div className="mt-8 flex justify-between">
         <button onClick={prevStep} disabled={currentStep === 0}>
